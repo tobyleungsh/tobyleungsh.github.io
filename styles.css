@@ -10,8 +10,8 @@
     --text: #def0fc;
     --background: #01080e;
     --primary: #7bc2f4;
-    --secondary: #180b8e;
-    --accent: #5c2ced;  
+    --secondary: #5c2ced;
+    --accent: #180b8e;  
   }
   
 * {
@@ -22,7 +22,9 @@
     background-color: var(--background);
 }
 
-
+body {
+    width:100%;
+}
 
 .logo {
     padding: 2em;
@@ -62,6 +64,7 @@ nav a:hover, #icon:hover {
     width:100%;
     height:90vh;
     display:flex;
+    flex-direction: column;
     justify-content:center;
     align-items:center;
 }
@@ -69,7 +72,17 @@ nav a:hover, #icon:hover {
 .hero_container h1 {
     font-size: 10rem;
     font-family: 'Poppins', sans-serif;
-    color:var(--text);
+    background: linear-gradient(135deg,var(--primary),var(--secondary));
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text;
+}
+
+.hero_container p {
+    font-size:3rem;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,var(--primary),var(--secondary));
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text;
 }
 
 hr {
@@ -79,11 +92,9 @@ hr {
 
 .footer {
     height:10vh;
-    width:100%;
     padding: 0rem 50px;
-    margin: 0 45%;
     display: flex;
-    flex: auto;
+    justify-content:center;
     align-items: center;
     
 }
