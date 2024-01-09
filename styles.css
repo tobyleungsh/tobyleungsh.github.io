@@ -10,7 +10,7 @@
     --text: #def0fc;
     --background: #01080e;
     --primary: #7bc2f4;
-    --secondary: #5c2ced;
+    --secondary: #3326A8;
     --accent: #180b8e;  
   }
   
@@ -50,11 +50,11 @@ nav a{
 }
 
 
-nav a:hover, #icon:hover {
+nav a:hover, #mode_icon:hover {
     color:#0b5183;
 }
 
-#icon {
+#mode_icon {
     cursor:pointer;
     color:var(--text);
 }
