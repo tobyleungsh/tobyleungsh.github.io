@@ -1,4 +1,4 @@
-:root {
+.light-theme {
     --text: #031521;
     --background: #f1f8fe;
     --primary: #0b5183;
@@ -6,7 +6,7 @@
     --accent: #4312d3;
   }
 
-  .dark-theme {
+  :root {
     --text: #def0fc;
     --background: #01080e;
     --primary: #7bc2f4;
@@ -18,38 +18,65 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Space Grotesk','Poppins','Source Sans 3', sans-serif; 
+    font-family: 'Space Grotesk','Poppins', sans-serif; 
     background-color: var(--background);
 }
 
-body {
-    width:100%;
-    overflow-y: visible;
-}
+
+/*.cursor {
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    margin:0 ;
+  background-size: 1600% 1600%;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 50%;
+  top:80px;
+
+}*/
 
 .logo {
     padding: 2em;
     font-size: 1.75rem;
-    font-family:'Poppins', sans-serif;
+    font-family:'Space Grotesk', sans-serif;
     font-weight: bold;
     color:var(--text);
+    opacity: 0;
+    /*animation: slide-left 1.3s cubic-bezier(.24,.56,.49,.99);*/
+
+}
+
+@keyframes slide-left {
+    0%{
+        transform: translateX(-10%);
+        opacity: 0;
+    };
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
 }
 
 nav {
-    height:80px;
+    height: 80px;
     display:flex;
     align-items: center;
     padding:0rem 50px;
     justify-content:space-between; 
+    top: 0;
+    position:sticky;
+    
 }
 
 nav a{
     text-decoration:none;
     padding:0 1.5rem;
-    font-family: "Poppins", sans-serif;
+    font-family: "Space Grotesk", sans-serif;
     color:var(--text);
+    cursor:pointer;
 }
-
 
 nav a:hover, #mode_icon:hover {
     color:#0b5183;
@@ -58,33 +85,51 @@ nav a:hover, #mode_icon:hover {
 #mode_icon {
     cursor:pointer;
     color:var(--text);
+} 
+
+main {
+    height:200vh;
 }
 
-
-
 .hero_container {
-    width:100%;
+    width:100vw;
     height:90vh;
     display:flex;
     flex-direction: column;
     justify-content:center;
     align-items:center;
+    padding: 0 50px;
 }
 
 .hero_container h1 {
-    font-size: 10rem;
-    font-family: 'Poppins', sans-serif;
+    font-size: 8rem;
+    font-family: 'Space Grotesk', sans-serif;
     background: linear-gradient(135deg,var(--primary),var(--secondary));
     -webkit-text-fill-color: transparent; 
-    -webkit-background-clip: text;
+    -webkit-background-clip: text;  
+    animation: slide-up 1.5s cubic-bezier(.24,.56,.49,.99) 0.8s backwards;
+    
+    
 }
 
 .hero_container p {
     font-size:3rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     background: linear-gradient(135deg,var(--primary),var(--secondary));
     -webkit-text-fill-color: transparent; 
-    -webkit-background-clip: text;
+    -webkit-background-clip: text;  
+    animation: slide-up 1.5s cubic-bezier(.24,.56,.49,.99) 0.8s backwards;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(200%);
+        opacity: 0;
+    };
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
 
 hr {
@@ -98,7 +143,6 @@ hr {
     display: flex;
     justify-content:center;
     align-items: center;
-    
 }
 
 
