@@ -19,7 +19,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Space Grotesk','Poppins', sans-serif; 
-    background-color: var(--background);
+    background: var(--background);
 }
 
 
@@ -43,9 +43,7 @@
     font-family:'Space Grotesk', sans-serif;
     font-weight: bold;
     color:var(--text);
-    opacity: 0;
     /*animation: slide-left 1.3s cubic-bezier(.24,.56,.49,.99);*/
-
 }
 
 @keyframes slide-left {
@@ -67,6 +65,7 @@ nav {
     justify-content:space-between; 
     top: 0;
     position:sticky;
+    background-color: var(--background);
     
 }
 
@@ -75,11 +74,13 @@ nav a{
     padding:0 1.5rem;
     font-family: "Space Grotesk", sans-serif;
     color:var(--text);
-    cursor:pointer;
+    
 }
 
 nav a:hover, #mode_icon:hover {
-    color:#0b5183;
+    color:var(--primary);
+    text-shadow: 0.5px 0.5px var(--text);
+    size:  75%;
 }
 
 #mode_icon {
@@ -161,7 +162,7 @@ hr {
 }
 
 .social a:hover{
-    color: #0b5183;
+    color: var(--primary);
 }
 
 .copyright {
