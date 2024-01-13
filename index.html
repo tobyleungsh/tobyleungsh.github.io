@@ -67,5 +67,13 @@
         
 </body>    
    <script src="main.js"></script>
-   <script type="module" src="scroll.js"></script>
+   <script src="locomotive-scroll.min.js"></script>
+   <script>
+       (function () {
+        const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true
+    });
+       })();
+   </script>
 </html>
